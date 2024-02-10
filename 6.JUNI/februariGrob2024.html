@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>Februari</title>
+</head>
+
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="text-center">
+          <img src="logo101.png" heigh="0" class="logo101" width="120" />
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="alert alert-primary text-center">
+          DATA JAM TERBANG PESAWAT G120TP-A GROB
+        </h1>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <form id="form"
+              action="https://script.google.com/macros/s/AKfycbyren902LFhra9PdEY1Dy8snNzf7Bk-UfI-CH54grv6UzfO_77zR6KdCOi07APcAuXeYg/exec"
+              method="post" name="input">
+              <input type="hidden" name="id" id="id" />
+              <label for="">AIRCRAFT</label>
+              <input type="text" placeholder="AIRCRAFT" class="form-control" name="AIRCRAFT" id="AIRCRAFT" required />
+              <br />
+              <label for="">EXERCISE</label>
+              <input type="text" placeholder="EXERCISE" class="form-control" name="EXERCISE" id="EXERCISE" required />
+
+              <br />
+              <label for="">PROGRAM</label> <br />
+             <select id="PROGRAM" placeholder="PROGRAM" class="form-control" >
+              <Option value="" disabled selected hidden class="form-control"> PILIH PROGRAM </Option>
+              <option value="Sekbang 103 LL">Sekbang 103 LL</option>
+              <option value="Sekbang 105 LD">Sekbang 105 LD</option>
+              <option value="Profisiensi">Profisiensi</option>
+              </select>
+              
+
+              
+              <br />
+              <label for="">JT_OPS</label>
+              <input type="text" placeholder="JT_OPS" class="form-control" name="JT_OPS" id="JT_OPS" required />
+              <br />
+              <label for="">JT_HAR</label>
+              <input type="text" placeholder="JT_HAR" class="form-control" name="JT_HAR" id="JT_HAR" required />
+              <br />
+              <label for="">LANDING</label>
+          
+              <input type="text" placeholder="LANDING" class="form-control" name="LANDING" id="LANDING" required />
+              <br />
+
+              <label for="">STATUS_UPLOAD</label>
+              <select id="STATUS_UPLOAD" placeholder="STATUS_UPLOAD" class="form-control" >
+                <Option value="" disabled selected hidden class="form-control"> STATUS UPLOAD </Option>
+                <option value="READY TO UPLOAD">READY TO UPLOAD</option>
+                <option value="NOT READY">NOT READY</option>
+                </select>
+
+              <br />
+              <button class="btn btn-sm btn-primary" type="button" onclick="save()">
+                Save
+              </button>
+              <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">
+                Reset
+              </button>
+              <button class="btn btn-sm btn-primary" type="button" id="simpanKeDrive" onclick="upload()">
+                Upload ke Drive
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table id="datatable" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>AIRCRAFT</th>
+                    <th>EXERCISE</th>
+                    <th>PROGRAM</th>
+                    <th>JT_OPS</th>
+                    <th>JT_HAR</th>
+                    <th>LANDING</th>
+                    <th>STATUS_UPLOAD</th>
+                  </tr>
+                </thead>
+                <tbody id="table"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  <script src="all_data.js"></script>
+  <script src="save.js"></script>
+  <script src="find.js"></script>
+  <script src="remove.js"></script>
+  <script src="saveDrive.js"></script>
+  <script>
+    allData();
+  </script>
+  <script>
+    function clearData() {
+      document.getElementById("form").reset();
+      document.getElementById("id").value = "";
+    }
+  </script>
+  <div class="loading-outer">
+    <div class="loading-inner"></div>
+  </div>
+</body>
+
+</html>

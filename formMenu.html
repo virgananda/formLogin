@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        FORM MENU
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body><br><br>
+    <H1 id="selamatDatang-">SELAMAT DATANG DI WEB TUT SKADRON PENDIDIKAN 101</H1>
+    <img id="logo101" src="logo101.png" class="logo101 animate__animated animate__fadeInDown">
+    <div id="container-1">
+        <button id="inputJamTerbang" type="button" class="btn btn-warning" onclick="btn1()">INPUT JAM TERBANG</button>
+        <button id="lihatJamTerbang" type="button" class="btn btn-warning" onclick="btn2()">LIHAT JAM TERBANG
+            IP</button>
+        <button id="cetakLaphar" type="button" class="btn btn-warning" onclick="btn3()">CETAK LAPHAR</button>
+        <button id="LOGOUT" type="button" class="btn btn-warning" onclick="btn4()>LOGOUT">LOGOUT</button>
+    </div>
+</body>
+
+<style>
+    body {
+        background-size: 1600px 1002px;
+        background-image: url(langit.jpg);
+        background-size: 1600px 1002px;
+    }
+
+    #selamatDatang- {
+        align-items: center;
+        display: flex;
+        margin-left: 9%;
+        color: aliceblue;
+        height: 20%;
+    }
+
+    @media screen and (max-width : 485px) {
+        #selamatDatang- {
+            align-items: justify;
+            display: flex;
+            margin-left: 6%;
+            color: aliceblue;
+            height: 20%;
+            size: 2pt;
+            
+        }
+
+    }
+
+    #logo101 {
+        align-items: center;
+        margin-left: 45%;
+        width: 150px;
+        height: 200px;
+        display: flex;
+    }
+
+    @media screen and (max-width : 485px) {
+        #logo101 {
+            align-items: center;
+            display: flex;
+            margin-left: 35%;
+            margin-top: 2%;
+           
+        }
+    }
+
+    #container-1 {
+        align-items: center;
+        border: 10px solid red;
+        justify-content: center;
+        display: flex;
+        padding: 4em 1em;
+        display: grid;
+        grid-template-columns: 600px 50fr;
+        grid-gap: 50px
+    }
+    @media screen and (max-width : 485px) {
+        #container-1 {
+            align-items: center;
+            display: flex;
+            margin-left: 3%;
+            margin-top: 2%;
+            border: 10px solid red;
+            display: grid;
+            grid-template-columns: 100px 10fr;
+        }
+    }
+
+    /* #inputJamTerbang {
+        align-items: center;
+        display: flex;
+        margin-left: 35%;
+        margin-top: 3%;
+        border: 10px solid red;
+    }
+
+    #lihatJamTerbang {
+        align-items: center;
+        display: flex;
+        margin-left: 35%;
+        margin-top: 3%;
+        border: 10px solid red;
+    }
+
+    #cetakLaphar {
+        align-items: center;
+        display: flex;
+        margin-left: 55%;
+        margin-top: -11.5%;
+        border: 10px solid red;
+    }
+
+    @media screen and (max-width : 485px) {
+        #cetakLaphar {
+            align-items: center;
+            display: flex;
+            margin-left: 35%;
+            margin-top: 2%;
+            border: 10px solid red;
+        }
+    }
+
+    #LOGOUT {
+        align-items: center;
+        display: flex;
+        margin-left: 55%;
+        margin-top: 2.7%;
+        border: 10px solid red;
+    }
+
+    @media screen and (max-width : 485px) {
+        #LOGOUT {
+            align-items: center;
+            display: flex;
+            margin-left: 35%;
+            margin-top: 2%;
+            border: 10px solid red;
+        }
+    } */
+</style>
+
+
+<Script>
+    // let btn1 = document.getElementById('inputJamterbang');
+    // let btn2 = document.getElementById('lihatJamTerbang');
+    // let btn3 = document.getElementById('cetakLaphar');
+    // let btn4 = document.getElementById('LOGOUT');
+
+    function btn1() {
+        window.location.replace("pilihTanggal.html");
+    }
+
+    function btn2() {
+        alert("maaf sementara belum ada gaesss");
+    }
+
+    function btn3() {
+        alert("maaf sementara belum ada gaesss");
+    }
+
+    function btn4() {
+        window.location.replace("formLogin.html");
+    }
+
+</Script>
+
+</html>

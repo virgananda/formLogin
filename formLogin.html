@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="latihan3.css" />
+    <link rel="halaman1.html>" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="body">
+
+    <img src="logo101.png" class="logo101 animate__animated animate__fadeInDown">
+
+    <style>
+        .logo101 {
+            align-items: center;
+            margin-left: 35%;
+            width: 150px;
+            height: 200px;
+        }
+
+        .body {
+            width: 300px;
+            border: 15px solid red;
+            padding: 50px;
+            margin: 20px;
+            background-image: url(gamar3.jpg);
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            background-size: 1600px 1002px;
+        }
+
+        .FORM {
+            align-items: center;
+            border: blue;
+        }
+
+        .h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .usr {
+            text-shadow: 5cap;
+            align-items: center;
+            justify-content: center;
+            flex: content;
+            display: flex;
+            color: white;
+        }
+
+        #user {
+            align-items: center;
+            justify-content: center;
+            flex: content;
+            display: flex;
+        }
+
+        .PASS {
+            align-items: center;
+            justify-content: center;
+            flex: content;
+            display: flex;
+            color: white;
+        }
+
+        #psswd {
+            align-items: center;
+            justify-content: center;
+            flex: content;
+            display: flex;
+        }
+
+        .SUBMIT {
+            margin-top: 30px;
+            align-items: center;
+            display: flex;
+            margin-left: 45%;
+
+        }
+
+        #anggota {
+            color: white;
+            align-items: center;
+            justify-content: center;
+            flex: content;
+            display: flex;
+        }
+
+
+        #biasa {
+            color: white;
+            margin-top: 30px;
+            align-items: center;
+            display: flex;
+            margin-left: 20%;
+
+        }
+
+        @media screen and (max-width: 476px) {
+            .body {
+                width: 50%;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: "gamar3.jpg";
+
+            }
+
+            .h1 {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .logo101 {
+                align-items: center;
+                margin-left: 28px;
+                margin-right: auto;
+            }
+        }
+    </style>
+
+    <div class="FORM">
+        <h1 class="h1">SKADRON PENDIDIKAN 101</h1>
+        <div class="usr">
+            <p><b>USERNAME</b></p>
+        </div>
+        <div id="user">
+            <input type="text" placeholder="username" id="USERNAME">
+        </div>
+        <div class="PASS">
+            <p><b>PASSWORD</b></p>
+        </div>
+
+        <div id="psswd">
+            <input type="password" placeholder="password" id="PASSWORD"> <BR></BR>
+        </div>
+        <div class="SUBMIT" id="SUBMIT">
+            <button onclick=" onLogin()">LOGIN</button>
+            <MASUK>
+        </div>
+    </div>
+
+    <h1 id="anggota"> LOGIN SEBAGAI ANGGOTA TUT</h1>
+    <h1 id="biasa"> TIDAK DAPAT LOGIN </h1>
+
+    <script type="application/javascript">
+
+        let USERNAME = document.getElementById('USERNAME');
+
+        let PASSWORD = document.getElementById('PASSWORD');
+
+        let SUBMIT = document.getElementsByClassName('SUBMIT');
+
+        let anggota = document.getElementById('anggota');
+
+        let biasa = document.getElementById('biasa');
+
+        anggota.style.display = "none";
+        biasa.style.display = "none";
+
+        function onLogin() {
+            console.log('aku di klik');
+            console.log(USERNAME.value);
+            console.log(PASSWORD.value);
+
+            if (USERNAME.value == "virga" && PASSWORD.value == "123") {
+                window.location.replace("formMenu.html");
+            } else {
+                alert('anda bukan anggota');
+                anggota.style.display = "none";
+                biasa.style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
